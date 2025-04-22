@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio Kaptur | Design Estratégico de Marcas e Presença Digital</title>
+  <meta name="description" content="Studio Kaptur oferece design estratégico de marcas e presença digital personalizada para negócios que desejam se destacar online.">
+  <meta property="og:title" content="Studio Kaptur | Design Estratégico de Marcas">
+  <meta property="og:description" content="Crie uma identidade visual marcante e fortaleça sua presença digital com o Studio Kaptur.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- PÁGINA INICIAL -->
+  <section id="topo" class="tela-visivel h-screen flex flex-col justify-center items-center text-center p-8 space-y-6">
+    <img src="https://i.postimg.cc/Qxp1TtK4/DALL-E-2025-04-21-15-40-58-A-minimal-and-elegant-logo-for-Studio-Kaptur-in-the-style-of-vintage.webp" alt="Logo Studio Kaptur" class="w-48 h-auto mb-4">
+    <h1 class="text-4xl font-bold text-yellow-400">Bem-vindo ao Studio Kaptur</h1>
+    <p class="max-w-xl text-lg">Transformamos ideias em identidades visuais fortes, com foco em presença digital e design estratégico.</p>
+    <div class="flex flex-col md:flex-row gap-4 mt-6">
+      <a href="https://ig.me/m/studiokaptur" target="_blank" rel="noopener noreferrer" class="btn inline-flex items-center gap-2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width:24px;height:24px;">
+        Contato Direto
+      </a>
+      <button id="abrirHistoria" class="btn">Uma breve história...</button>
+      <button id="abrirServicos" class="btn">Nossos serviços</button>
+    </div>
+  </section>
+
+  <!-- SEÇÃO HISTÓRIA -->
+  <main id="historia" class="tela-escondida swiper mySwiper">
+    <div class="swiper-wrapper h-full w-full">
+    </div>
+  </main>
+
+  <!-- SEÇÃO SERVIÇOS -->
+  <main id="servicos" class="tela-escondida swiper mySwiperServicos h-screen">
+    <div class="swiper-wrapper h-full">
+    </div>
+    <div class="text-center w-full mt-6">
+      <button class="btn voltar-btn" onclick="voltarInicio()">Voltar ao início</button>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
