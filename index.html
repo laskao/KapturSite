@@ -3,52 +3,176 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Studio Kaptur | Design Estratégico de Marcas e Presença Digital</title>
-  <meta name="description" content="Studio Kaptur oferece design estratégico de marcas e presença digital personalizada para negócios que desejam se destacar online.">
-  <meta property="og:title" content="Studio Kaptur | Design Estratégico de Marcas">
-  <meta property="og:description" content="Crie uma identidade visual marcante e fortaleça sua presença digital com o Studio Kaptur.">
-  
+  <title>Studio Kaptur | Design Estratégico</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: url('https://i.postimg.cc/DwLNfWPJ/background-resized-6144x3456.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #fafafa;
+      scroll-behavior: smooth;
+      height: 100%;
+    }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    .tela-escondida {
+      display: none;
+    }
+
+    .tela-visivel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .btn {
+      background-color: #facc15;
+      color: #000;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.375rem;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn:hover {
+      background-color: #eab308;
+      transform: scale(1.05);
+    }
+
+    .swiper, .swiper-wrapper, .swiper-slide {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      background: #1a1a1a;
+      color: #fafafa;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .swiper-slide img {
+      max-width: 90%;
+      height: auto;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+    }
+  </style>
 </head>
 <body>
-
-  <!-- PÁGINA INICIAL -->
-  <section id="topo" class="tela-visivel h-screen flex flex-col justify-center items-center text-center p-8 space-y-6">
-    <img src="https://i.postimg.cc/Qxp1TtK4/DALL-E-2025-04-21-15-40-58-A-minimal-and-elegant-logo-for-Studio-Kaptur-in-the-style-of-vintage.webp" alt="Logo Studio Kaptur" class="w-48 h-auto mb-4">
-    <h1 class="text-4xl font-bold text-yellow-400">Bem-vindo ao Studio Kaptur</h1>
-    <p class="max-w-xl text-lg">Transformamos ideias em identidades visuais fortes, com foco em presença digital e design estratégico.</p>
-    <div class="flex flex-col md:flex-row gap-4 mt-6">
-      <a href="https://ig.me/m/studiokaptur" target="_blank" rel="noopener noreferrer" class="btn inline-flex items-center gap-2">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width:24px;height:24px;">
-        Contato Direto
-      </a>
-      <button id="abrirHistoria" class="btn">Uma breve história...</button>
-      <button id="abrirServicos" class="btn">Nossos serviços</button>
+  <section id="topo" class="tela-visivel">
+    <div class="bg-black bg-opacity-40 backdrop-blur-md p-6 rounded-xl flex flex-col items-center text-center">
+      <img src="https://i.postimg.cc/Qxp1TtK4/DALL-E-2025-04-21-15-40-58-A-minimal-and-elegant-logo-for-Studio-Kaptur-in-the-style-of-vintage.webp" alt="Logo Studio Kaptur" class="w-40 mb-6">
+      <h1 class="text-2xl font-semibold tracking-wide text-yellow-300 drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">Bem-vindo ao Studio Kaptur</h1>
+      <div class="flex flex-wrap justify-center gap-4 mt-4">
+        <a href="https://ig.me/m/studiokaptur" target="_blank" rel="noopener noreferrer" class="btn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width:24px;height:24px;">
+          Contato Direto
+        </a>
+        <button id="abrirServicos" class="btn">Nossos serviços</button>
+      </div>
     </div>
   </section>
 
-  <!-- SEÇÃO HISTÓRIA -->
-  <main id="historia" class="tela-escondida swiper mySwiper">
-    <div class="swiper-wrapper h-full w-full">
+  <main id="servicos" class="tela-escondida swiper mySwiperServicos">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide h-full w-full overflow-y-auto flex flex-col md:flex-row items-center gap-10 px-4 md:px-16 py-12 text-left">
+        <img src="https://i.postimg.cc/5233HMPC/A-vintage-comic-style-illustration-in-sepia-tones.png" alt="Criação de Marca" class="rounded-xl shadow-lg w-full md:w-1/2">
+        <div>
+          <h3 class="text-3xl font-bold text-yellow-300 mb-4">Criação de Marca</h3>
+          <p class="text-lg leading-relaxed">Criamos marcas com propósito, posicionamento claro e apelo visual. Da estratégia ao design, desenvolvemos identidades que conectam negócios ao seu público com autenticidade e força.</p>
+        </div>
+      </div>
+      <div class="swiper-slide h-full w-full overflow-y-auto flex flex-col md:flex-row items-center gap-10 px-4 md:px-16 py-12 text-left">
+        <img src="https://i.postimg.cc/zXQpMhBd/Chat-GPT-Image-21-de-abr-de-2025-21-38-58.png" alt="Logotipo Profissional" class="rounded-xl shadow-lg w-full md:w-1/2">
+        <div>
+          <h3 class="text-3xl font-bold text-yellow-300 mb-4">Logotipo Profissional</h3>
+          <p class="text-lg leading-relaxed">Seu logotipo é o cartão de visitas da sua marca. Criamos logos memoráveis que transmitem profissionalismo e identidade clara.</p>
+        </div>
+      </div>
+      <div class="swiper-slide h-full w-full overflow-y-auto flex flex-col md:flex-row items-center gap-10 px-4 md:px-16 py-12 text-left">
+        <img src="https://i.postimg.cc/HL813VD5/Chat-GPT-Image-21-de-abr-de-2025-23-18-22.png" alt="Desenvolvimento de Sites" class="rounded-xl shadow-lg w-full md:w-1/2">
+        <div>
+          <h3 class="text-3xl font-bold text-yellow-300 mb-4">Desenvolvimento de Sites</h3>
+          <p class="text-lg leading-relaxed">Sites modernos, rápidos e responsivos. Desenvolvemos sua presença digital com foco em usabilidade e conversão.</p>
+        </div>
+      </div>
+      <div class="swiper-slide h-full w-full overflow-y-auto flex flex-col md:flex-row items-center gap-10 px-4 md:px-16 py-12 text-left">
+        <img src="https://i.postimg.cc/Jz2WbjgM/Chat-GPT-Image-21-de-abr-de-2025-23-18-26.png" alt="Marketing e Branding" class="rounded-xl shadow-lg w-full md:w-1/2">
+        <div>
+          <h3 class="text-3xl font-bold text-yellow-300 mb-4">Marketing e Branding</h3>
+          <p class="text-lg leading-relaxed">Construímos estratégias completas de marketing e posicionamento de marca para impulsionar seu negócio.</p>
+        </div>
+      </div>
+      <div class="swiper-slide h-full w-full overflow-y-auto flex flex-col md:flex-row items-center gap-10 px-4 md:px-16 py-12 text-left">
+        <img src="https://i.postimg.cc/x1QtG2F5/Chat-GPT-Image-21-de-abr-de-2025-21-41-52.png" alt="Gestão de Redes Sociais" class="rounded-xl shadow-lg w-full md:w-1/2">
+        <div>
+          <h3 class="text-3xl font-bold text-yellow-300 mb-4">Gestão de Redes Sociais</h3>
+          <p class="text-lg leading-relaxed">Conteúdos criativos e estratégicos para engajar seu público e fortalecer sua marca nas redes sociais.</p>
+        </div>
+      </div>
+      <div class="swiper-slide h-full w-full overflow-y-auto flex flex-col md:flex-row items-center gap-10 px-4 md:px-16 py-12 text-left">
+        <img src="https://i.postimg.cc/hjFWYccY/Chat-GPT-Image-21-de-abr-de-2025-23-18-20.png" alt="Consultoria Criativa" class="rounded-xl shadow-lg w-full md:w-1/2">
+        <div>
+          <h3 class="text-3xl font-bold text-yellow-300 mb-4">Consultoria Criativa</h3>
+          <p class="text-lg leading-relaxed">Ajudamos você a tomar decisões estratégicas com uma visão de design, marketing e posicionamento digital. Soluções sob medida para seus desafios criativos.</p>
+        </div>
+      </div>
     </div>
-  </main>
-
-  <!-- SEÇÃO SERVIÇOS -->
-  <main id="servicos" class="tela-escondida swiper mySwiperServicos h-screen">
-    <div class="swiper-wrapper h-full">
-    </div>
-    <div class="text-center w-full mt-6">
-      <button class="btn voltar-btn" onclick="voltarInicio()">Voltar ao início</button>
+    <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-50">
+      <button id="voltarInicioServicos" class="btn">Voltar ao início</button>
     </div>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="script.js"></script>
+  <script>
+    const topo = document.getElementById('topo');
+    const servicos = document.getElementById('servicos');
+    const btnAbrirServicos = document.getElementById('abrirServicos');
+    const btnVoltarInicio = document.getElementById('voltarInicioServicos');
+
+    const swiperServicos = new Swiper('.mySwiperServicos', {
+      direction: 'horizontal',
+      slidesPerView: 1,
+      speed: 1000,
+      mousewheel: true,
+    });
+
+    if (btnAbrirServicos) {
+      btnAbrirServicos.addEventListener('click', () => {
+        topo.classList.add('tela-escondida');
+        topo.classList.remove('tela-visivel');
+        servicos.classList.remove('tela-escondida');
+        servicos.classList.add('tela-visivel');
+        setTimeout(() => {
+          swiperServicos.update();
+          swiperServicos.slideTo(0);
+        }, 100);
+      });
+    }
+
+    if (btnVoltarInicio) {
+      btnVoltarInicio.addEventListener('click', () => {
+        servicos.classList.add('tela-escondida');
+        servicos.classList.remove('tela-visivel');
+        topo.classList.remove('tela-escondida');
+        topo.classList.add('tela-visivel');
+      });
+    }
+  </script>
 </body>
 </html>
